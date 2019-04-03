@@ -1,0 +1,6 @@
+<form>
+    <div class="form-group">
+        <input type="text" class="form-control" [(ngModel)]="product.name" [ngModelOptions]="{standalone: true}"/>
+        <button class="btn btn-primary" (click)="addProduct()">Add</button>
+    </div>
+</form>

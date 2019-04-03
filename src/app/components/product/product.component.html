@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-lg-4" *ngFor="let product of products" [class.selected]="product === selectedProduct">
+        <div class="card mb-5">
+            <a  routerLink="/product/{{product.id}}"><img class="card-img-top" src="{{product.image}}" alt="" /></a>
+            <div class="card-body">
+                <h4 class="card-title">
+                    <a href="#">{{product.name}}</a>
+                </h4>
+                <h5>{{product.price_sale  | currency: "VND"}}
+                    <del>{{product.price_regular  | currency: "VND"}}</del>
+                </h5>
+            </div>
+            <div class="card-footer">
+                <a class="btn btn-sm btn-outline-primary mr-2" routerLink="/products/{{product.id}}">Chi tiết</a>
+                <button class="btn btn-sm btn-outline-danger mr-2" (click)="removeProduct(product.id)">Xóa</button>
+            </div>
+        </div>
+    </div>
+</div>

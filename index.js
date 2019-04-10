@@ -18,5 +18,5 @@ app.use(express.static(__dirname + '/dist'));
 
 // rewrite virtual urls to angular app to enable refreshing of internal pages
 app.get('*', function (req, res, next) {
-    res.sendFile(path.resolve(__dirname + '/dist/index.html'));
+    res.sendFile(path.resolve(__dirname + '/dist/AngularBasic/index.html'));
 });

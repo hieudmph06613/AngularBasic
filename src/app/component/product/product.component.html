@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-3">
+      <div class="row">
+        <div class="col-9">
+          <div class="ad">   
+              <div class="embed-responsive embed-responsive-16by9"> <iframe class="embed-responsive-item"
+                  src="https://www.youtube.com/embed/T1LqYfgb6EY" allowfullscreen></iframe>
+              </div>
+              <br>
+            <div>
+              <img src=" https://i.pinimg.com/originals/99/30/5f/99305f5ec58f269b35293107aa3af692.jpg"
+                class="card-img-top" alt="...">
+            </div>
+            <br>
+            <div>
+              <img src=" https://d3nuqriibqh3vw.cloudfront.net/heineken_babyonboard.png"
+                class="card-img-top" alt="...">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-9">
+      <div class="row">
+        <div class="col-4" *ngFor="let product of products">
+          <div class="card">
+            <img src="{{product.img}}" class="card-img-top" alt="moutain" height="250" width="1000">
+            <p>Mã sản phẩm: {{product.id}}</p>
+            <p>Tên sản phẩm: {{product.name}}</p>
+            <p>Giá Gốc: <span>{{product.price}} $</span></p>
+            <p>Giá khuyến mãi: {{product.reviews}} $</p>
+            <P>{{product.status ? 'Còn hàng' : 'viewsHết hàng'}}</P>
+            <br />
+            <button type="button" class="btn btn-info" routerLink="/product/{{product.id}}">
+              Xem chi tiết
+            </button>
+            <br />
+            <button class="btn btn-warning" (click)="Delete(product.id)">Xóa sản phẩm</button>
+            
+          </div>
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr />
+</div>
+<app-add [dataproduct]="products"></app-add>
+<!-- <div *ngIf="selected">
+  <app-product-detail [infoProduct]="selected"></app-product-detail>
+</div> -->

@@ -1,0 +1,5 @@
+.card span{
+    text-decoration: line-through;
+    text-decoration-color: black;
+    color: silver;
+}

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "AngularBasic": {
+    "lab2": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,12 +13,13 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/AngularBasic",
+            "outputPath": "dist/lab2",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
+              "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
@@ -57,18 +58,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "AngularBasic:build"
+            "browserTarget": "lab2:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "AngularBasic:build:production"
+              "browserTarget": "lab2:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "AngularBasic:build"
+            "browserTarget": "lab2:build"
           }
         },
         "test": {
@@ -102,7 +103,7 @@
         }
       }
     },
-    "AngularBasic-e2e": {
+    "lab2-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -111,11 +112,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "AngularBasic:serve"
+            "devServerTarget": "lab2:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "AngularBasic:serve:production"
+              "devServerTarget": "lab2:serve:production"
             }
           }
         },
@@ -131,5 +132,5 @@
       }
     }
   },
-  "defaultProject": "AngularBasic"
+  "defaultProject": "lab2"
 }

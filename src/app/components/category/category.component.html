@@ -1,0 +1,3 @@
+<ul *ngIf="category">
+  <li *ngFor="let item of category"><a routerLink="/category/{{item.id}}/product">{{item.name}}</a></li>
+</ul>

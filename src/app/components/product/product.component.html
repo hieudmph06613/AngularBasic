@@ -1,0 +1,15 @@
+
+<app-add-product [dataProduct]="products"></app-add-product>
+
+<div class="row mt-5">
+  <div class="col-4" *ngFor="let product of products">
+    <div class="card">
+      <img src="{{product.image}}" alt="" class="img-fluid">
+      <p>{{product.id}}</p>
+      <p>{{product.name | uppercase}}</p>
+      <button (click)="deleteItem(product)">Delete</button>
+      <button routerLink="/product/{{product.id}}">Chi tiết</button>
+    </div>
+  </div>
+</div>
+

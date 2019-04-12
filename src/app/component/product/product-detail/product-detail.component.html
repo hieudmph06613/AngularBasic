@@ -1,0 +1,12 @@
+<img src="{{product.image}}"/>
+<p>
+  {{product.id}}
+</p>
+<p>
+  {{product.name}}
+</p>
+<form>
+  <input type="text" class="form-control" placeholder="Product Name" [(ngModel)]="product.name"
+  [ngModelOptions]="{standalone: true}" />
+  <button type="button" class="btn btn-primary" (click)="saveProduct()" data-dismiss="modal">Add Product</button>
+</form>

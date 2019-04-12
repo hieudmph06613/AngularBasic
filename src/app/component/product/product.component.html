@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-4" *ngFor='let product of products'>
+    <div class="card">
+      <img src="{{product.image}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{product.id}}</h5>
+        <p>{{product.name}}</p>
+        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+        <p>{{product.color ? 'Còn hàng':'Hết hàng'}}</p>
+      </div>
+      <div class="card-footer">
+        <button type="button" class="btn btn-primary" routerLink="/product/{{product.id}}">Action</button>
+        <button type="button" class="btn btn-primary" (click)="deleteProduct(product)">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
+<!-- <app-add-product [dataProduct]="products"></app-add-product> -->

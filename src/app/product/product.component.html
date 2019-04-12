@@ -1,0 +1,48 @@
+<app-slide></app-slide>
+<div class="row">
+  <div class="col-md-4 col-sm-6 col-xl-3" *ngFor="let product of products">
+    <div class="card">
+      <img src="{{product.img}}" class="card-img-top" width="300px" height="200px" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{product.name}}</h5>
+        <!-- <p>{{product.status ? 'Còn hàng':'Hết hàng'}}</p> -->
+        <p>{{product.priceSale}}$ &nbsp; <span>{{product.priceRegular}}$</span> </p>
+        <button class="btn btn-outline-dark mr-3" routerLink = "/product/{{product.id}}">Show Detail</button>
+      </div>
+    </div>
+    <br>
+  </div>
+</div>
+
+
+<!-- <hr>
+<div *ngIf="selected">
+  <app-product-detail [infoProduct]="selected"></app-product-detail>
+</div> -->
+
+
+
+
+<!-- <div class="card">
+    <img src="{{productImg}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{productName}}</h5>
+      <p class="card-text">Product ID : {{productID}}</p>
+      <p>{{statusProdcut ? 'Còn hàng':'Hết hàng'}}</p>
+      <p>{{priceSale}} <span>{{priceRegular}}</span> </p>
+      <a href="#" class="btn btn-primary">Chi tiết</a> ({{review}} nhận xét)
+    </div>
+  </div> -->
+
+<!-- <div class="row">
+    <div class="col-md-4 col-sm-6 col-xl-3 *ngFor="let product of products">
+      <div class="card">
+        <img src="{{product.img}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{product.name}}</h5>
+          <p class="card-text">Product ID : {{product.id}}</p>
+          <button class="btn btn-primary" (click)="showDetail(product)">Chi tiết</button>
+        </div>
+      </div>
+   </div>
+  </div> -->

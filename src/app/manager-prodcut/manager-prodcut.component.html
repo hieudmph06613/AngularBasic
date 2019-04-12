@@ -1,0 +1,28 @@
+<app-add-product [dataProduct]="products"></app-add-product>
+<table class="table table-bordered mt-3" >
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Image</th>
+      <th scope="col">Name</th>
+      <th scope="col">Price Sale</th>
+      <th scope="col">Price Regular</th>
+      <th scope="col">Status</th>
+      <th scope="col">Button</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let product of products">
+    <tr>
+      <td>{{product.id}}</td>
+      <td><img src="{{product.img}}" width="50px" height="30px"></td>
+      <td>{{product.name}}</td>
+      <td>{{product.priceSale}} $</td>
+      <td>{{product.priceRegular}} $</td>
+      <td>{{product.status?'Còn Hàng':'Hết Hàng'}}</td>
+      <td>
+        <button class="btn btn-outline-info btn-sm mr-2" routerLink = "/product/{{product.id}}">Chi tiết</button>
+        <button type="button" class="btn btn-outline-success btn-sm mr-2" routerLink = "/edit-product/{{product.id}}">Sửa</button>
+        <button type="button" class="btn btn-outline-danger btn-sm" (click)="delete(product.id)">Xóa</button></td>
+    </tr>
+  </tbody>
+</table>

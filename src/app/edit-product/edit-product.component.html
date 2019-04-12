@@ -1,0 +1,79 @@
+<div class="card mb-3">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img src="{{detailProduct.img}}" width="500px" height="200px" class="card-img mt-1 ml-1 mb-1" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body ml-3">
+        <h5 class="card-title">Product Name : {{detailProduct.name}}</h5>
+        <h5 class="card-title">Product ID : {{detailProduct.id}}</h5>
+        <h5 class="card-title">Price Sale : {{detailProduct.priceSale}}$</h5>
+        <h5 class="card-title">Price Regular : <span>{{detailProduct.priceRegular}}$</span> </h5>
+        <h5 class="card-title">Trạng thái : {{detailProduct.status ? 'Còn hàng':'Hết hàng'}}</h5>
+      </div>
+    </div>
+  </div>
+</div>
+
+<form #formEdit="ngForm" (submit)="onSubmit(formEdit)">
+  <!-- Upload Imga-->
+  <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-default">Product Image</span>
+      </div>
+      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Product Image"
+      [(ngModel)]="detailProduct.img" required  name="img" #img="ngModel">
+    </div>
+    <div class="alert alert-danger mt-3" *ngIf="img.dirty && img.errors?.required">
+      Ảnh không được bỏ trống
+    </div>
+  <!-- Name-->
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">Product Name</span>
+    </div>
+    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Product Name"
+      [(ngModel)]="detailProduct.name" name="name" required minlength="3" #productName="ngModel">
+  </div>
+  <div class="alert alert-danger mt-3" *ngIf="productName.dirty && productName.errors?.required">
+    Tên sản phẩm không được bỏ trống
+  </div>
+  <div class="alert alert-danger mt-3" *ngIf="productName.dirty && productName.errors?.minlength">
+    Tên sản phẩm phải trên 3 ký tự
+  </div>
+  <!-- Sale-->
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">Price Sale</span>
+    </div>
+    <input type="number" class="form-control" id="formGroupExampleInput" placeholder="Price Sale"
+      [(ngModel)]="detailProduct.priceSale" priceSale="priceSale" name="priceSale" required
+      #priceSale="ngModel">
+  </div>
+  <div class="alert alert-danger mt-3" *ngIf="priceSale.dirty && priceSale.errors?.required">
+    Giá không hợp lệ !
+  </div>
+  <!-- Regular-->
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">Price Regular</span>
+    </div>
+    <input type="number" class="form-control" id="formGroupExampleInput" placeholder="Price Regular"
+      [(ngModel)]="detailProduct.priceRegular" name="priceRegular" required #priceRegular="ngModel">
+  </div>
+  <div class="alert alert-danger mt-3" *ngIf="priceRegular.dirty && priceRegular.errors?.required">
+    Giá không hợp lệ !
+  </div>
+  <!--Status-->
+  <div class="input-group mt-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text">Còn hàng </span>
+      <div class="input-group-text">
+        <input type="checkbox" aria-label="Checkbox for following text input" [(ngModel)]="detailProduct.status"
+        [ngModelOptions]="{standalone: true}">
+      </div>
+    </div>
+  </div>
+  <!-- btn-->
+  <button type="submit" class="btn btn-outline-success mt-3">Save Change</button>
+</form>

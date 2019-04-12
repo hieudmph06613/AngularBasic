@@ -1,0 +1,92 @@
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#exampleModal">
+  Thêm sản phẩm
+</button>
+<!-- Modal -->
+<form #formAddProduct="ngForm" (submit)="onSubmit(formAddProduct)">
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Add Product </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row no-gutters">
+            <div class="col-md-12">
+              <div class="form-group">
+                <!-- Upload Imga-->
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroup-sizing-default">Product Image</span>
+                    </div>
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Product Image"
+                      [(ngModel)]="product.img" required  name="img"  #img="ngModel">
+                </div>
+                <div class="alert alert-danger mt-3" *ngIf="img.dirty && img.errors?.required">
+                  Ảnh không được bỏ trống
+                </div>
+                <!-- Product Name-->
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Product Name</span>
+                  </div>
+                  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Product Name"
+                    [(ngModel)]="product.name" name="name" required minlength="3" #productName="ngModel">
+                </div>
+                <div class="alert alert-danger mt-3" *ngIf="productName.dirty && productName.errors?.required">
+                  Tên sản phẩm không được bỏ trống
+                </div>
+                <div class="alert alert-danger mt-3" *ngIf="productName.dirty && productName.errors?.minlength">
+                  Tên sản phẩm phải trên 3 ký tự
+                </div>
+                {{productName.className}}
+                <!-- Price Sale-->
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Price Sale</span>
+                  </div>
+                  <input type="number" class="form-control" id="formGroupExampleInput" placeholder="Price Sale"
+                    [(ngModel)]="product.priceSale" priceSale="priceSale" name="priceSale" required
+                    #priceSale="ngModel">
+                </div>
+                <div class="alert alert-danger mt-3" *ngIf="priceSale.dirty && priceSale.errors?.required">
+                  Giá không được bỏ trống
+                </div>
+                <!--Price Regular-->
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Price Regular</span>
+                  </div>
+                  <input type="number" class="form-control" id="formGroupExampleInput" placeholder="Price Regular"
+                    [(ngModel)]="product.priceRegular" name="priceRegular" required #priceRegular="ngModel">
+                </div>
+                <div class="alert alert-danger mt-3" *ngIf="priceRegular.dirty && priceRegular.errors?.required">
+                  Giá Re không được bỏ trống
+                </div>
+                <!-- Status Checkbox-->
+                <div class="input-group mt-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Còn hàng </span>
+                    <div class="input-group-text">
+                      <input type="checkbox" aria-label="Checkbox for following text input" [(ngModel)]="product.status"
+                        name="status">
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

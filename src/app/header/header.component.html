@@ -1,0 +1,17 @@
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" routerLink="product">
+    <img src="https://i.pinimg.com/736x/a6/16/b8/a616b897150ddf74f903c5bd3a36280b--gud-hama-beads.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+    Vayne
+  </a>
+  <ul class="nav justify-content-end">
+    <li routerLinkActive="nav-item active" [routerLinkActiveOptions]="{exact:true}">
+      <a class="nav-link" routerLink="/product" >Product</a>
+    </li>
+    <li routerLinkActive="nav-item active" [routerLinkActiveOptions]="{exact:true}">
+      <a class="nav-link" routerLink="/manager-product">Manager Product</a>
+    </li>
+    <li routerLinkActive="nav-item active" [routerLinkActiveOptions]="{exact:true}">
+      <a class="nav-link" routerLink="#">Link</a>
+    </li>
+  </ul>
+</nav>

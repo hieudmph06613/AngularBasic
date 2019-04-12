@@ -1,0 +1,86 @@
+<!-- <form action="">
+  <input type="text" value=""><br>
+  <input type="button" (click)=showadd() value="click1"><br>
+  <input type="button" (click)=showadd2() value="click2">
+</form> -->
+
+<!-- Button trigger modal -->
+
+<button type="button" class="btn addProduct btn-primary " data-toggle="modal" data-target="#exampleModalLong">
+  Thêm sản phẩm
+</button>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+  aria-hidden="true">
+  <form #fromAddProduct="ngForm" (submit)="onSubmit(fromAddProduct)">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+          <!-- Name Product -->
+          <div class="form-group">
+            <label for="exampleInputEmail1">Name</label>
+            <input type="text" class="form-control " id="exampleInputEmail1" aria-describedby="emailHelp"
+              placeholder="Name" [(ngModel)]="product.name" name="name" class="form-control" required
+              minlength="6" #productName="ngModel">
+              <label *ngIf="productName.dirty && productName.required"
+              style="color: green;padding-top: 5px;margin-bottom: 0px"> Tên Không Để trống!</label>
+            <label *ngIf="productName.dirty && productName.errors?.required"
+              style="color: red;padding-top: 5px;margin-bottom: 0px"> Tên Không Để trống!</label>
+            <label *ngIf="productName.dirty && productName.errors?.minlength"
+              style="color: red;padding-top: 5px;margin-bottom: 0px"> Tên phải tốn thiểu 6!</label>
+
+          </div>
+
+
+          <!-- Price Sale -->
+          <div class="form-group">
+            <label for="exampleInputPassword1">Price Sale</label>
+            <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Price Sale"
+              [(ngModel)]="product.priceSale" name="priceSale" class="form-control" required
+              #productPriceSale="ngModel">
+            <label *ngIf="productPriceSale.dirty && productPriceSale.errors?.required"
+              style="color: red;padding-top: 5px;margin-bottom: 0px"> Tên Không Để trống!</label>
+
+          </div>
+
+          <!-- Price Regular -->
+          <div class="form-group">
+            <label for="exampleInputPassword1">Price Regular</label>
+            <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Price Regular"
+              [(ngModel)]="product.priceRegular" name="priceRegular" class="form-control" required
+              #productpriceRegular="ngModel">
+            <label *ngIf="productpriceRegular.dirty && productpriceRegular.errors?.required"
+              style="color: red;padding-top: 5px;margin-bottom: 0px"> Price Regular Không Để trống!</label>
+
+          </div>
+
+
+          <!-- Radio box -->
+
+          
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox"  id="inlineRadio2" value=""
+              [(ngModel)]="product.status" name="status" required #productStatus="ngModel">
+            <label class="form-check-label" >Còn Hàng</label>
+          </div>
+          <label *ngIf="productStatus.dirty && productStatus.errors?.required"
+            style="color: red;padding-top: 5px;margin-bottom: 0px"> Phải chọn</label>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary mr-3" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary" [disabled]="fromAddProduct.invalid">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

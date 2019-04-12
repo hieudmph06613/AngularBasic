@@ -1,0 +1,59 @@
+
+
+
+<!-- Product -->
+
+<div class="row" style="margin-top: 100px;">
+    
+      
+  <div class=" col-sm-12 col-md-6 col-lg-4 col-xl-3  mb-3" *ngFor="let product of products">
+    <div class="card card-product shadow p-3 mb-5 bg-white rounded" style="width: 15rem;">
+      <img src="{{product.img}}" class="card-img-top" alt="..." width="100px;">
+     
+      <div class="card-body">
+        <!-- <h5 class="card-title">{{product.id}}</h5> -->
+        <p class="card-text"><b>{{product.name}}</b></p>
+        <p class="priceregular">Sale:{{product.priceSale}} VNĐ</p>
+        <p class="pricereSale" style="color: red;">Price:{{product.priceRegular}} VNĐ</p>
+        <!-- <button href="#" class="btn btn-danger  mb-2" (click)="deleteItem(product.id)" style="width: 100%">
+          Delete</button> -->
+        
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-info " routerLink="/product/{{product.id}}" style="width: 100%">
+          Detail
+        </button>
+
+        <!-- Modal -->
+        <!-- <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog"
+          aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalScrollableTitle" *ngIf="selected">{{selected.name}}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div *ngIf="selected">
+                  <div class="alert alert-info" role="alert">
+                    
+                    <b>Name</b> : {{selected.name}}<br>
+                    <b>PriceSale</b>: {{selected.priceSale}}<br>
+                    <b>Priceregular</b>: {{selected.priceRegular}}<br>
+                    <b>Color: </b>{{selected.color? 'Còn Hàng':'Hết Hàng'}}<br>
+                    <b>Link image</b>: {{selected.img}}
+                  </div>
+                  
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+.addProduct{
+    margin-top: 100px;
+}
+.ng-valid[required], .ng-valid.required  {
+    /* border-left: 6px solid #42A948;  */
+    /* green */    
+    border:1px solid green;
+  }
+  
+  .ng-invalid:not(form)  {
+    /* border-left: 6px solid red;  */
+    /* red#a94442 */
+    border:1px solid red;
+  }

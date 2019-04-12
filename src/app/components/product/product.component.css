@@ -1,0 +1,16 @@
+.priceregular{
+    text-decoration: line-through;
+    text-decoration-color: black;
+    color: silver;
+}
+/* .card .icon-sale img{
+    position: relative;
+    top:15px;
+    left: 15px;
+    width: 50px;
+} */
+.card-product:hover{
+box-shadow: 1px 1px 1px 1px rgb(113, 221, 240);
+border-collapse: inherit;
+
+}

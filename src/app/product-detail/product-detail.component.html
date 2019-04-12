@@ -1,0 +1,66 @@
+<div *ngIf="product">
+  <div class="card" class="col-md-4 col-sm-6 ">
+    <div class="card-body">
+      <img src="{{product.img}}" class="card-img-top" alt="...">
+      <br />
+      <br />
+      <h5 class="card-title">Product Name : {{product.name}}</h5>
+      <p class="card-text">Product ID : {{product.id}}</p>
+      <p class="card-text">Price Sale : {{product.priceSale}}</p>
+  
+      <p class="card-text">Price Regular : <span>{{product.priceRegular}}</span> </p>
+      <p class="card-text">Review : {{product.review}}</p>
+      <p>{{product.status ? 'Còn hàng':'Hết hàng'}}</p>
+    </div>
+  </div>
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Edit
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Edit</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="formGroupExampleInput">Product</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Product name"
+              [(ngModel)]="product.name" [ngModelOptions]="{standalone: true}" />
+          </div>
+  
+          <div class="form-group">
+            <label for="formGroupExampleInput">Price Sale</label>
+            <input type="number" class="form-control" id="formGroupExampleInput" placeholder="Price Sale"
+              [(ngModel)]="product.priceSale" [ngModelOptions]="{standalone: true}" />
+          </div>
+          <div class="form-group">
+            <label for="formGroupExampleInput">Price Regular</label>
+            <input type="number" class="form-control" id="formGroupExampleInput" placeholder="Price Regular"
+              [(ngModel)]="product.priceRegular" [ngModelOptions]="{standalone: true}" />
+          </div>
+          <div class="form-group">
+              <label for="formGroupExampleInput">Image link</label>
+            <input type="text" class="form-control" placeholder="IMG url" [(ngModel)]="product.img"
+              [ngModelOptions]="{standalone: true}" />
+          </div>
+          <form>
+            <div class="form-group">
+              <input type="file" class="form-control-file" id="exampleFormControlFile1" (chang)="getIMG($event)" />
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button class="btn btn-primary" (click)="save()" data-dismiss="modal">Edit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

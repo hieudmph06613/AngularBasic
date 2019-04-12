@@ -1,0 +1,63 @@
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Add product
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <form #formAddProduct="ngForm" (submit)="onSubmit(formAddProduct)">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Add product</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="formGroupExampleInput">Product Name</label>
+            <input type="text" name="name" class="form-control" id="formGroupExampleInput" placeholder="Product name"
+              [(ngModel)]="product.name" required minlength="3" #productName="ngModel" />
+            <div class="alert alert-danger mt-3" *ngIf="productName.dirty && productName.errors?.required">
+              Không được để trống tên sản phẩm
+            </div>
+            <div class="alert alert-danger mt-3" *ngIf="productName.dirty && productName.errors?.minlength">
+              Tên sản phẩm phải có ít nhất 3 ký tự
+            </div>
+            {{productName.className}}
+          </div>
+          <div class="form-group">
+            <label for="formGroupExampleInput">Price Regular</label>
+            <input type="number" name="priceRegular" class="form-control" id="formGroupExampleInput"
+              placeholder="Price Regular" [(ngModel)]="product.priceRegular" required #priceRegular="ngModel" />
+            <div class="alert alert-danger mt-3" *ngIf="priceRegular.dirty && priceRegular.errors?.required">
+              Không được để trống giá
+            </div>
+            {{priceRegular.className}}
+          </div>
+          <div class="form-group">
+            <label for="formGroupExampleInput">Price Sale</label>
+            <input type="number" class="form-control" id="formGroupExampleInput" placeholder="Price Sale"
+              [(ngModel)]="product.priceSale" [ngModelOptions]="{standalone: true}" />
+          </div>
+          <div class="form-group">
+            <label for="formGroupExampleInput">Image link</label>
+            <input type="text" class="form-control" placeholder="IMG url" [(ngModel)]="product.img"
+              [ngModelOptions]="{standalone: true}" />
+          </div>
+          <form>
+            <div class="form-group">
+              <input type="file" class="form-control-file" id="exampleFormControlFile1" (chang)="getIMG($event)" />
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary" [disabled] = "formAddProduct.invalid" >Thêm</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

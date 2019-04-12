@@ -1,0 +1,33 @@
+<app-add-product [dataProduct] = "products"></app-add-product>
+<br/>
+<hr>
+<br/>
+<div class="row">
+  <div class="col-md-4 col-sm-6 col-xl-3" *ngFor="let product of products">
+    <div class="card">
+      <img src="{{product.img}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{product.name}}</h5>
+        <p>{{product.status ? 'Còn hàng':'Hết hàng'}}</p>
+        <p>{{product.priceSale}} <span>{{product.priceRegular}}</span> </p>
+        <button class="btn btn-primary" routerLink="/product/{{product.id}}">Chi tiết</button>
+        <p>   </p>
+        <p> </p>
+        <button class="btn btn-primary" (click)="delete(product)">Xóa</button>
+      </div>
+    </div>
+    <br/>
+  </div>
+  
+</div>
+<hr>
+
+
+
+
+
+
+
+  
+  
+  

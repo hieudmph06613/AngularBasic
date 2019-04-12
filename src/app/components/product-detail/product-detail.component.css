@@ -1,0 +1,88 @@
+/*== Theme Defualt CSS ==*/
+
+.overlay {
+	position: relative;
+	z-index: 1;
+}
+
+.overlay:after {
+	background-color: rgba(0, 0, 0, 0.8);
+	content: "";
+	left: 0;
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+}
+
+.section-padding {
+	padding: 10px 0;
+}
+
+.section-title {
+	font-size: 15px;
+	font-weight: 300;
+	margin-bottom: 80px;
+}
+
+.section-title h2 {
+	margin-bottom: 10px;
+	position: relative;
+	text-transform: uppercase;
+	font-weight: 800;
+}
+
+.section-title p {
+	margin-top: 10px;
+}
+
+.section-title .title-line {
+	color: #ffd000;
+	position: relative;
+}
+
+.section-title .title-line::after {
+	background-color: #333;
+	content: "";
+	height: 2px;
+	left: -60px;
+	position: absolute;
+	top: 10px;
+	width: 50px;
+}
+
+.section-title .title-line::before {
+	background-color: #333;
+	content: "";
+	height: 2px;
+	position: absolute;
+	right: -60px;
+	top: 10px;
+	width: 50px;
+}
+
+.overlay .section-title h2,
+.overlay .section-title p {
+	color: #fff;
+}
+
+.overlay .section-title .title-line::after,
+.overlay .section-title .title-line::before {
+	background-color: #fff;
+}
+
+.scroll-top {
+    bottom: 50px;
+    cursor: pointer;
+    display: none;
+    position: fixed;
+    right: 30px;
+    width: 30px;
+    z-index: 9999;
+}
+
+/*== Theme Defualt CSS ==*/
+#page-title-area .section-title {
+	margin-bottom: 0;
+}

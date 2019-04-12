@@ -1,0 +1,176 @@
+/*== Theme Defualt CSS ==*/
+
+.overlay {
+	position: relative;
+	z-index: 1;
+}
+
+.overlay:after {
+	background-color: rgba(0, 0, 0, 0.8);
+	content: "";
+	left: 0;
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+}
+
+.section-padding {
+	padding: 10px 0;
+}
+
+.section-title {
+	font-size: 15px;
+	font-weight: 300;
+	margin-bottom: 30px;
+}
+
+.section-title h2 {
+	margin-bottom: 10px;
+	position: relative;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.section-title p {
+	margin-top: 10px;
+}
+
+.section-title .title-line {
+	color: #ffd000;
+	position: relative;
+}
+
+.section-title .title-line::after {
+	background-color: #333;
+	content: "";
+	height: 2px;
+	left: -60px;
+	position: absolute;
+	top: 10px;
+	width: 50px;
+}
+
+.section-title .title-line::before {
+	background-color: #333;
+	content: "";
+	height: 2px;
+	position: absolute;
+	right: -60px;
+	top: 10px;
+	width: 50px;
+}
+
+.overlay .section-title h2,
+.overlay .section-title p {
+	color: #fff;
+}
+
+.overlay .section-title .title-line::after,
+.overlay .section-title .title-line::before {
+	background-color: #fff;
+}
+
+.scroll-top {
+    bottom: 50px;
+    cursor: pointer;
+    display: none;
+    position: fixed;
+    right: 30px;
+    width: 30px;
+    z-index: 9999;
+}
+
+/*== Theme Defualt CSS ==*/
+
+.display-table {
+    height: 100%;
+    width: 100%;
+    display: table;
+}
+
+.display-table-cell {
+    vertical-align: middle;
+    display: table-cell;
+}
+
+/*== About Area CSS Start ==*/
+
+.about-content {
+    line-height: 2.3em;
+    font-size: 14px;
+}
+
+.about-content p {
+	margin-bottom: 25px;
+}
+
+.about-content p:last-child {
+	margin-bottom: 0;
+}
+
+.about-btn a {
+	background-color: #ffd000;
+	border-radius: 50px;
+	color: #fff;
+	display: inline-block;
+	font-size: 13px;
+	font-weight: 600;
+	margin-right: 20px;
+	padding: 6px 30px;
+	text-transform: uppercase;
+	-webkit-transition: all 0.4s ease 0s;
+	transition: all 0.4s ease 0s;
+}
+
+.about-btn a:hover {
+	background-color: #222;
+}
+
+
+.about-video {
+	position: relative;
+	padding-bottom: 56.25%;
+}
+
+.about-video iframe {
+	border: medium none;
+	border-radius: 3px;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+/*== About Area CSS End ==*/
+
+.maparea {
+	margin-top: 20px;
+	height: 550px;
+}
+
+.maparea iframe {
+	border: medium none;
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	height: 100%;
+	width: 100%;
+}
+
+.maparea iframe:hover {
+	border: medium none;
+	-webkit-filter: grayscale(0%);
+	filter: grayscale(0%);
+	height: 100%;
+	width: 100%;
+}
+
+/*== Responsive ==*/
+.about-image {
+    margin-top: 0;
+}
+.about-image {
+    margin-top: 50px;
+}

@@ -1,0 +1,141 @@
+<div class="container">
+  <!--== Page Title Area Start ==-->
+  <section id="page-title-area" class="section-padding">
+    <div class="container">
+      <div class="row">
+        <!-- Page Title Start -->
+        <div class="col-lg-12">
+          <div class="section-title  text-center">
+            <h2>⚜️Our Collection⚜️</h2>
+            <span class="title-line">
+              <i class="fa fa-car"></i>
+            </span>
+            <p>World's best supercar collection.</p>
+          </div>
+        </div>
+        <!-- Page Title End -->
+      </div>
+    </div>
+  </section>
+  <!--== Page Title Area End ==-->
+
+  <!--== Gallery Page Content Start ==-->
+  <section id="gallery-page-content" class="section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="popular-cars-wrap">
+            <!-- Filtering Menu -->
+            <div class="popucar-menu text-center">
+              <a routerLink="/product/page/1" data-filter="*" class="active">all</a>
+              <a routerLink="/product/page/1" data-filter=".con">Lamborghini</a>
+              <a routerLink="/product/page/1" data-filter=".hat">Ferrari</a>
+              <a routerLink="/product/page/1" data-filter=".mpv">Bugatti</a>
+              <a routerLink="/product/page/1" data-filter=".sedan">BMW</a>
+              <a routerLink="/product/page/1" data-filter=".suv">Mercedes</a>
+            </div>
+            <!-- Filtering Menu -->
+
+            <div class="row popular-car-gird">
+              <!-- Single Popular Car Start -->
+              <div class="col-lg-4 col-md-6 {{product.name}}" *ngFor="let product of products">
+                <div class="single-popular-car">
+                  <div class="p-car-thumbnails">
+                    <a class="car-hover" data-toggle="modal" data-target="#myModal" (click)="showDetail(product)">
+                      <img [src]="product.img" alt="JSOFT" height="100%">
+                    </a>
+                  </div>
+
+                  <div class="p-car-content">
+                    <h3>
+                      <a href="#">{{product.name}}</a>
+                      <span class="price">
+                        <i class="fa fa-tag"></i>{{product.priceRegular}}</span>
+                    </h3>
+
+                    <h5>HATCHBACK</h5>
+
+                    <div class="p-car-feature">
+                      <a href="#">2017</a>
+                      <a href="#">manual</a>
+                      <a href="#">AIR CONDITION</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Single Popular Car End -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page-pagi">
+      <nav aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item">
+            <a class="page-link" href="#">Previous</a>
+          </li>
+          <li class="page-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+            <a class="page-link" routerLink="/product/page/1">1</a>
+          </li>
+          <li class="page-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+            <a class="page-link" routerLink="/product/page/2">2</a>
+          </li>
+          <li class="page-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+            <a class="page-link" routerLink="/product/page/3">3</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+  <!--== Gallery Page Content End ==-->
+
+  <!-- Product Detail -->
+  <!-- The Modal -->
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Product Detail</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div *ngIf="selected">
+            <div class="alert alert-success text-center">
+              <img [src]="selected.img" alt="" width="100%" class="rounded" height="400px">
+              <strong>
+                💎Name: {{selected.name}}
+                <br> 💰Price: {{selected.priceRegular}}$
+                <br> 🚦 Status: {{selected.color?'Available 👍':'Unavailable 👎'}}
+                <br> 🏆Rating:
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" style="width:30%">
+                    Fabulous
+                  </div>
+                  <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" style="width:20%">
+                    Comfortable
+                  </div>
+                  <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" style="width:50%">
+                    So fking expensive=))))
+                  </div>
+                </div>
+              </strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

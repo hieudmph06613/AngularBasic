@@ -1,0 +1,12 @@
+.salePrice{
+    text-decoration: line-through;
+    color: red;
+}
+.row .card img{
+    transition: all 300ms linear 0s;
+    height: 150px;
+}
+.row .card:hover img{
+    transform: scale(1.2);
+    opacity: 1;
+}

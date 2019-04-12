@@ -1,0 +1,28 @@
+/*== Choose Car Area CSS Start ==*/
+
+#choose-car.section-padding {
+	padding-bottom: 70px;
+}
+
+.choose-content-wrap .nav-tabs {
+	border-bottom: 3px solid #ffd000;
+}
+
+.choose-content-wrap .nav-tabs li a {
+	background-color: #f3f3f3 !important;
+	border: medium none;
+	border-radius: 0 !important;
+	color: #1e2228 !important;
+	font-size: 13px;
+	font-weight: 700;
+	letter-spacing: 1.3px;
+	margin-right: 3px;
+	padding: 12px 20px;
+	text-transform: uppercase;
+}
+
+.choose-content-wrap .nav-tabs li a.active {
+	background-color: #ffd000 !important;
+	background-color: #ffd000 !important;
+	color: #fff!important;
+}

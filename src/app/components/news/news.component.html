@@ -1,0 +1,19 @@
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>NEWS ID</th>
+            <th>NEWS TITLE</th>
+            <th colspan="2">
+                <app-add-news></app-add-news>
+            </th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let news of newsList">
+        <tr>
+            <th>{{news.newsId}}</th>
+            <th>{{news.title}}</th>
+            <th class="text-center"><button type="button" class="btn btn-sm btn-success">📝 Edit</button></th>
+            <th class="text-center"><button type="button" class="btn btn-sm btn-danger" (click)="deleteNews(news)">🚫Delete</button></th>
+        </tr>
+    </tbody>
+</table>

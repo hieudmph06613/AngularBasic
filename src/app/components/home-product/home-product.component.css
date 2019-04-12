@@ -1,0 +1,929 @@
+/*== Theme Defualt CSS ==*/
+
+.overlay {
+	position: relative;
+	z-index: 1;
+}
+
+.overlay:after {
+	background-color: rgba(0, 0, 0, 0.8);
+	content: "";
+	left: 0;
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+}
+
+.section-padding {
+	padding: 10px 0;
+}
+
+.section-title {
+	font-size: 15px;
+	font-weight: 300;
+	margin-bottom: 80px;
+	font-weight: 800;
+}
+
+#page-title-area .section-title {
+	padding: 0px 0;
+	font-weight: 200;
+	margin-bottom: 10px;
+}
+
+.section-title h2 {
+	margin-bottom: 10px;
+	position: relative;
+	text-transform: uppercase;
+}
+
+.section-title p {
+	margin-top: 10px;
+}
+
+.section-title .title-line {
+	color: #ffd000;
+	position: relative;
+}
+
+.section-title .title-line::after {
+	background-color: #333;
+	content: "";
+	height: 2px;
+	left: -60px;
+	position: absolute;
+	top: 10px;
+	width: 50px;
+}
+
+.section-title .title-line::before {
+	background-color: #333;
+	content: "";
+	height: 2px;
+	position: absolute;
+	right: -60px;
+	top: 10px;
+	width: 50px;
+}
+
+.overlay .section-title h2,
+.overlay .section-title p {
+	color: #fff;
+}
+
+.overlay .section-title .title-line::after,
+.overlay .section-title .title-line::before {
+	background-color: #fff;
+}
+
+.scroll-top {
+    bottom: 50px;
+    cursor: pointer;
+    display: none;
+    position: fixed;
+    right: 30px;
+    width: 30px;
+    z-index: 9999;
+}
+
+/*== Theme Defualt CSS ==*/
+
+/*== Fun Fact Area CSS Start ==*/
+
+#funfact-area {
+	background-image: url(../../../assets/img/funfact-bg.jpg);
+	background-size: cover;
+	background-position: center center;
+	color: #fff;
+}
+
+.single-funfact {
+	background-color: rgba(0, 0, 0, 0.6);
+	padding: 100px 40px;
+	text-align: center;
+}
+
+.funfact-icon {
+	color: #ffd000;
+	font-size: 50px;
+}
+
+.funfact-icon,
+.funfact-content {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.funfact-content {
+	font-size: 40px;
+	font-weight: 700;
+	padding-left: 25px;
+}
+
+.funfact-content h4 {
+	color: #eaeaea;
+	font-size: 14px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+/*== Fun Fact Area CSS End ==*/
+
+/*==============================
+    About Page Css
+================================*/
+
+#our-facility {
+	background-image: url(../../../assets/img/slider-img/slider-img-1.jpg);
+	background-size: cover;
+	background-position: center center;
+	color: #fff;
+}
+
+.single-our-facility h3 {
+	color: #fff;
+	font-size: 20px;
+	margin-bottom: 30px;
+	padding-bottom: 15px;
+	position: relative;
+}
+
+.single-our-facility h3::after {
+	background-color: #ffd000;
+	bottom: 0;
+	content: "";
+	height: 2px;
+	left: 0;
+	position: absolute;
+	width: 100px;
+}
+
+.single-our-facility ul {
+	font-weight: 600;
+	line-height: 3.5;
+}
+
+.single-our-facility ul li {
+	position: relative;
+}
+
+.single-our-facility ul li::before {
+	color: #ffd000;
+	content: "\f046";
+	font-family: fontawesome;
+	margin-right: 15px;
+}
+
+/*==============================
+    Gallery Page Css
+================================*/
+
+#gallery-page-content .popucar-menu {
+	margin-top: 0;
+}
+
+
+/* Popular Cars Css Start */
+
+.popucar-menu {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-ms-flex-wrap: nowrap;
+	flex-wrap: nowrap;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	margin: 50px 0;
+	overflow: hidden;
+}
+
+.popucar-menu a {
+	border: 1px solid #e2e2e2;
+	color: #333;
+	display: inline-block;
+	-ms-flex-preferred-size: 100%;
+	flex-basis: 100%;
+	font-size: 13px;
+	font-weight: 600;
+	padding: 12px 0;
+	position: relative;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+	text-transform: uppercase;
+}
+
+.popucar-menu a + a {
+	border-left: 0px;
+}
+
+.popucar-menu a:hover,
+.popucar-menu a.active {
+	background-color: #ffd000;
+	border-color: #ffd000;
+	color: #fff;
+}
+
+.popucar-menu a.active::after {
+	border-bottom: 10px solid #fff;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	bottom: -2px;
+	content: "";
+	left: 50%;
+	margin-bottom: 1px;
+	position: absolute;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+
+.single-popular-car {
+	-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+	margin-bottom: 30px;
+}
+
+.p-car-thumbnails a.car-hover {
+	display: block;
+	position: relative;
+}
+
+.p-car-thumbnails a.car-hover::after {
+	background-color: #000;
+	content: "";
+	height: 100%;
+	left: 0;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	-webkit-transform: scaleX(0);
+	transform: scaleX(0);
+	-webkit-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+	width: 100%;
+}
+
+.p-car-thumbnails a.car-hover:hover:after {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	opacity: .5;
+}
+
+.p-car-thumbnails img{
+    height: 200px;
+}
+
+.p-car-thumbnails a.car-hover::before {
+	background-color: rgba(0, 0, 0, 0.5);
+	border-radius: 50%;
+	bottom: 0;
+	color: #fff;
+	content: "\f00e";
+	font-family: FontAwesome;
+	font-size: 18px;
+	height: 50px;
+	left: 0;
+	line-height: 50px;
+	margin: auto;
+	opacity: 0;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	top: 0;
+	-webkit-transform: scale(2);
+	transform: scale(2);
+	-webkit-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+	width: 50px;
+	z-index: 2;
+}
+
+.p-car-thumbnails a.car-hover:hover:before {
+	opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+.p-car-content {
+	padding: 25px 20px;
+}
+
+.single-popular-car h3 {
+	font-size: 17px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.single-popular-car h3 a {
+	color: #333;
+}
+
+.single-popular-car h3 span.price {
+	color: #ffd000;
+	float: right;
+	font-size: 14px;
+	font-weight: 700;
+}
+
+.single-popular-car h5 {
+	color: #828282;
+	font-size: 11px;
+	text-transform: uppercase;
+	margin: 13px 0 15px;
+}
+
+.p-car-feature a {
+	border: 1px solid #e2e2e2;
+	color: #828282;
+	font-size: 11px;
+	font-weight: 600;
+	padding: 3px 8px;
+	text-transform: uppercase;
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+}
+
+.p-car-feature a:hover {
+	background-color: #ffd000;
+	color: #fff;
+	border-color: #ffd000;
+}
+
+
+/* Popular Cars Css End */
+
+
+/* ==== RESPONSIVE CSS ==== */
+/* ==== Medium Layout: 1280px ==== */
+
+@media only screen and (min-width: 992px) {
+	.slicknav_menu {
+		display: none;
+	}
+	.slider-right-text {
+		font-size: 16px;
+		text-align: right;
+		margin-top: 0px;
+	}
+	.slider-right-text h1 {
+		font-size: 45px;
+	}
+	.about-btn a {
+		padding: 6px 30px;
+	}
+	.about-video {
+		margin-top: 0;
+	}
+	.service-content .col-lg-6:nth-child(5) .single-service,
+	.service-content .col-lg-6:last-child .single-service {
+		margin-bottom: 0;
+	}
+	.single-funfact {
+		margin-bottom: 0;
+	}
+	.choose-content-wrap ul.nav-tabs .nav-item {
+		margin-bottom: 0 !important;
+	}
+	.single-pricing-table,
+	.single-footer-widget {
+		margin-bottom: 0;
+	}
+	#mobile-app-area::after {
+		display: inline-block;
+	}
+	.mobile-app-content h2 {
+		font-size: 70px;
+	}
+	.app-btns a {
+		font-size: 16px;
+		margin-right: 40px;
+		padding: 10px 20px;
+	}
+	.single-article .article-thumb {
+		margin-right: 0;
+	}
+	.single-article.middle .article-thumb {
+		margin-left: 0;
+	}
+	.article-body {
+		padding: 0 25px;
+	}
+	.article-date {
+		left: -58px;
+		top: 50%;
+		-webkit-transform: translateX(0);
+		-ms-transform: translateX(0);
+		transform: translateX(0);
+	}
+	.single-article.middle .article-date {
+		left: auto;
+		right: -58px;
+		z-index: 1;
+	}
+	.single-testimonial {
+		margin-left: 100px;
+		padding: 50px 30px 50px 70px;
+	}
+	.single-testimonial p {
+		font-size: 13px;
+		margin-bottom: 0;
+	}
+	.single-testimonial p,
+	.single-testimonial h3 {
+		text-align: left;
+	}
+	.client-logo {
+		bottom: auto;
+		left: -70px;
+		margin-left: 0;
+		top: 50%;
+	}
+
+
+	/* === HOME PAGE TWO RESPONSIVE CSS === */
+	.slideshowcontent h1 {
+		font-size: 70px;
+	}
+	.slideshowcontent {
+		font-size: 17px;
+	}
+	.service-image,
+	.home2-car-filter {
+		margin-bottom: 50px;
+	}
+	.about-image {
+		margin-top: 0;
+	}
+	.about-feature-item {
+		margin-bottom: 0;
+	}
+
+
+	/* === HOME PAGE THREE RESPONSIVE CSS === */
+	#book-a-car {
+		padding-top: 0;
+	}
+	.booka-car-content {
+		margin-top: -120px;
+	}
+	.ourcar-pic {
+		margin: 0;
+	}
+
+	/* === CAR and ABOUT PAGE RESPONSIVE CSS === */
+	.car-list-info {
+		margin-left: -15px;
+	}
+	.car-list-content .col-lg-6:nth-child(3) .single-car-wrap {
+		margin-bottom: 0;
+	}
+	.single-service-item:nth-child(2n+1) .service-item-content {
+		padding-right: 0;
+	}
+	.single-service-item:nth-child(2n+2) .service-item-content {
+		padding-left: 0;
+	}
+	.pricing-details-content .col-lg-6:nth-child(3) .single-pricing-table,
+	.single-our-facility {
+		margin-bottom: 0;
+	}
+}
+
+
+/* ==== Wide Tablet Layout: 767px ==== */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	.slicknav_menu {
+		display: block;
+	}
+	.slider-right-text {
+		font-size: 16px;
+		text-align: center;
+		margin-top: 50px;
+	}
+	.slider-right-text h1,
+	.slideshowcontent h1 {
+		font-size: 45px;
+	}
+	.about-btn a {
+		padding: 6px 30px;
+	}
+	.about-video {
+		margin-top: 50px;
+	}
+	.single-funfact {
+		margin-bottom: 50px;
+	}
+	.funfact-content-wrap .col-lg-4:last-child .single-funfact {
+		margin-bottom: 0;
+	}
+	.choose-content-wrap ul.nav-tabs .nav-item {
+		margin-bottom: 0 !important;
+	}
+	.single-pricing-table,
+	.single-footer-widget {
+		margin-bottom: 50px;
+	}
+	#footer-area .col-lg-4:last-child .single-footer-widget,
+	#pricing-area .col-lg-4:last-child .single-pricing-table {
+		margin-bottom: 0;
+	}
+	#mobile-app-area::after {
+		display: none;
+	}
+	.mobile-app-content h2 {
+		font-size: 40px;
+	}
+	.app-btns a {
+		font-size: 16px;
+		margin-right: 40px;
+		padding: 10px 20px;
+	}
+	.app-btns a i {
+		font-size: 20px;
+	}
+	.article-body {
+		padding: 50px 15px 25px 15px;
+	}
+	.article-date,
+	.single-article.middle .article-date {
+		left: 50%;
+		top: 9px;
+		-webkit-transform: translateX(-50%);
+		-ms-transform: translateX(-50%);
+		transform: translateX(-50%);
+	}
+	.single-testimonial {
+		margin-left: 100px;
+		padding: 50px 30px 50px 70px;
+	}
+	.single-testimonial p {
+		font-size: 13px;
+		margin-bottom: 0;
+	}
+	.single-testimonial p,
+	.single-testimonial h3 {
+		text-align: left;
+	}
+	.client-logo {
+		bottom: auto;
+		left: -70px;
+		margin-left: 0;
+		top: 50%;
+	}
+
+	/* === HOME PAGE TWO RESPONSIVE CSS === */
+	.slideshowcontent {
+		font-size: 16px;
+	}
+	.bookinput-item {
+		margin-bottom: 15px;
+		width: 49.5%;
+	}
+	.bookinput-item:nth-child(2) {
+		margin-right: 0
+	}
+	.bookinput-item:nth-child(4) {
+		margin-right: 0
+	}
+	.bookinput-item:last-child {
+		margin-bottom: 0
+	}
+	.team-tab-menu {
+		margin-bottom: 30px;
+	}
+	.service-image {
+		margin: 50px 0;
+	}
+	.service-content .col-lg-6:nth-child(5) .single-service {
+		margin-bottom: 0;
+	}
+	.home2-car-filter {
+		margin-bottom: 50px;
+	}
+	.about-image {
+		margin-top: 50px;
+	}
+	.about-feature-item {
+		margin-bottom: 30px;
+	}
+	.ourcar-pic {
+		margin: 50px 0;
+	}
+
+	/* === CAR PAGE RESPONSIVE CSS === */
+	.car-list-info {
+		padding: 20px;
+	}
+	.m-t-50 {
+		margin-top: 50px;
+	}
+	.car-list-content .col-lg-6:nth-child(3) .single-car-wrap {
+		margin-bottom: 0;
+	}
+
+	/* === SERVICE and ABOUT PAGE RESPONSIVE CSS === */
+	.service-item-content,
+	.service-item-thumb {
+		float: none;
+		width: 100%;
+	}
+	.service-item-content {
+		padding: 50px 0;
+	}
+	#our-facility .col-lg-3:nth-child(3) .single-our-facility,
+	#our-facility .col-lg-3:last-child .single-our-facility {
+		margin-bottom: 0;
+	}
+	.single-our-facility {
+		margin-bottom: 50px;
+	}
+	.pricing-details-content .col-lg-6:nth-child(3) .single-pricing-table {
+		margin-bottom: 0;
+	}
+
+}
+
+/* ==== Mobile Layout: 320px ==== */
+
+@media only screen and (max-width: 767px) {
+	.slider-right-text {
+		font-size: 14px;
+		text-align: center;
+		margin-top: 50px;
+	}
+	.slider-right-text h1,
+	.slideshowcontent h1 {
+		font-size: 30px;
+	}
+	.about-btn a {
+		padding: 5px 25px;
+	}
+	.about-video {
+		margin-top: 50px;
+	}
+	.single-funfact {
+		margin-bottom: 50px;
+	}
+	.funfact-content-wrap .col-lg-4:last-child .single-funfact {
+		margin-bottom: 0;
+	}
+	.choose-content-wrap ul.nav-tabs li.nav-item {
+		margin-bottom: 10px !important;
+	}
+	.single-pricing-table,
+	.single-footer-widget {
+		margin-bottom: 50px;
+	}
+	#footer-area .col-lg-4:last-child .single-footer-widget,
+	#pricing-area .col-lg-4:last-child .single-pricing-table {
+		margin-bottom: 0;
+	}
+	#mobile-app-area::after {
+		display: none;
+	}
+	.mobile-app-content h2 {
+		font-size: 26px;
+	}
+	.app-btns a {
+		font-size: 13px;
+		margin-right: 10px;
+		padding: 8px 15px;
+	}
+	.app-btns a i {
+		font-size: 13px;
+	}
+	.article-body {
+		padding: 50px 15px 25px 15px;
+	}
+	.article-date,
+	.single-article.middle .article-date {
+		left: 50%;
+		top: 9px;
+		-webkit-transform: translateX(-50%);
+		-ms-transform: translateX(-50%);
+		transform: translateX(-50%);
+	}
+	.single-testimonial::after {
+		display: none;
+	}
+	.single-testimonial {
+		margin-left: 0;
+		padding: 15px;
+	}
+	.single-testimonial p {
+		font-size: 12px;
+		margin-bottom: 150px;
+	}
+	.single-testimonial p,
+	.single-testimonial h3 {
+		text-align: center;
+	}
+	.client-logo {
+		bottom: 3px;
+		left: 50%;
+		margin-left: -52.5px;
+		top: auto;
+	}
+	.team-member-pro-pic {
+		margin: 10px 0;
+	}
+
+
+	/* === HOME PAGE TWO RESPONSIVE CSS === */
+	.slideshowcontent {
+		font-size: 13px;
+	}
+	.bookinput-item {
+		margin-bottom: 15px;
+		width: 100%;
+	}
+	.service-image {
+		margin: 50px 0;
+	}
+	.home2-car-filter {
+		margin-bottom: 50px;
+	}
+	.about-image {
+		margin-top: 50px;
+	}
+	.about-feature-item {
+		margin-bottom: 30px;
+	}
+
+
+	/* === HOME PAGE THREE RESPONSIVE CSS === */
+	.single-we-do {
+		margin-bottom: 30px;
+	}
+	.ourcar-pic {
+		margin: 50px 0;
+	}
+	/* === CAR PAGE RESPONSIVE CSS === */
+	.car-list-info {
+		padding: 20px;
+	}
+	.m-t-50 {
+		margin-top: 50px;
+	}
+	.name-input {
+		margin-bottom: 30px;
+	}
+	.car-details-content h2 {
+		font-size: 20px;
+	}
+	/* === SERVICE and ABOUT PAGE RESPONSIVE CSS === */
+	.service-item-content,
+	.service-item-thumb {
+		float: none;
+		width: 100%;
+	}
+	.service-item-content {
+		padding: 30px 0;
+	}
+	#our-facility .col-lg-3:last-child .single-our-facility {
+		margin-bottom: 0;
+	}
+	.single-our-facility {
+		margin-bottom: 50px;
+	}
+
+}
+
+
+/**
+*******************************************
+* Reset CSS start
+*******************************************
+**/
+
+
+.fix {
+    overflow: hidden;
+}
+
+.alignleft {
+    float: left;
+}
+
+.alignright {
+    float: right;
+}
+
+.aligncenter {
+    display: block;
+    margin: 0 auto;
+}
+
+.display-table {
+    height: 100%;
+    width: 100%;
+    display: table;
+}
+
+.display-table-cell {
+    vertical-align: middle;
+    display: table-cell;
+}
+
+a:hover,
+a:focus,
+a:active {
+    color: inherit;
+}
+
+a:focus {
+    outline-offset: -2px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2em;
+    color: #222;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #333;
+    letter-spacing: 0.8px;
+}
+
+a:hover {
+    text-decoration: none
+}
+
+
+/* Remove Chrome Input Field's Unwanted Yellow Background Color */
+
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+::-moz-selection {
+    background-color: #fff;
+    color: #fab702;
+}
+
+::selection {
+    background-color: #fff;
+    color: #fab702;
+}
+
+/**
+*******************************************
+* Reset CSS End
+*******************************************
+**/
+
+/*== Page Pagination CSS ==*/
+
+.page-pagi {
+	margin-top: 50px;
+}
+
+.page-pagi nav li a {
+	border-color: #ffd000;
+	color: #000;
+	font-weight: 600;
+	-webkit-transition: all 0.4s ease 0s;
+	transition: all 0.4s ease 0s;
+}
+
+.page-pagi nav ul li.active a {
+	background-color: #ffd000 !important;
+	border-color: #ffd000 !important;
+}
+
+.page-pagi nav li a:hover {
+	background-color: #ffd000;
+	border-color: #ffd000;
+	color: #fff;
+}

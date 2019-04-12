@@ -19,39 +19,33 @@
           <div class="modal-body">
 
             <div class="form-group">
-              <label>Name</label>
+              <label>Name </label>
+              <span class="text-danger" *ngIf="tempName.dirty && tempName.errors?.required">
+                Required
+              </span>
               <input type="text" class="form-control" [(ngModel)]="product.name" required name="name"
-                #spyName="ngModel">
+                #tempName="ngModel">
             </div>
             <div class=" form-group">
-              <label>Price</label>
-              <input type="number" class="form-control" [(ngModel)]="product.price" required name="price">
-            </div>
-
-            {{spyName.className}}
-            <div class="alert alert-danger" *ngIf="spyName.dirty && spyName.errors?.required">
-              REQUIRED
-            </div>
-
-            <!-- <div class="form-group">
-              <label>Image</label>
-              <input type="text" class="form-control" [(ngModel)]="product.img">
+              <label>Price </label>
+              <span class="text-danger" *ngIf="tempPrice.dirty && tempPrice.errors?.min">
+                Invalid
+              </span>
+              <input type="number" class="form-control" [(ngModel)]="product.price" name="price" min="0"
+                #tempPrice="ngModel">
             </div>
             <div class="form-group">
-              <label>Detail</label>
-              <input type="text" class="form-control" [(ngModel)]="product.detail">
-            </div> -->
-
-            <!--For input: [ngModelOptions]="{standalone: true} -->
+              <label>Image </label>
+              <input type="text" class="form-control" [(ngModel)]="product.img" name="img">
+            </div>
+            <div class="form-group">
+              <label>Detail </label>
+              <input type="text" class="form-control" [(ngModel)]="product.detail" name="detail">
+            </div>
 
           </div>
           <div class="modal-footer">
             <button class="btn btn-primary" type="submit" [disabled]="productForm.invalid">Submit</button>
-            <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" (click)="addProduct()" data-dismiss="modal"
-            *ngIf="action=='add'">Save</button>
-          <button type="button" class="btn btn-primary" (click)="update()" data-dismiss="modal"
-            *ngIf="action=='edit'">Update</button> -->
           </div>
         </form>
       </div>

@@ -1,0 +1,47 @@
+<div class="container-fluid bg-light">
+  <div class="container bg-light">
+    <ul class="nav justify-content-start float-left">
+      <li class="nav-item">
+        <a class="nav-link text-primary font-weight-bold" href="#"> Welcome to Devicer</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-muted font-italic" href="#">Customer Care 1-800-123-4567</a>
+      </li>
+    </ul>
+    <ul class="nav justify-content-end">
+      <li class="nav-item">
+        <a class="nav-link text-primary font-weight-bold" href="#">Signup</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-primary font-weight-bold" href="#">Login</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<nav class="container navbar navbar-expand-lg">
+  <a class="navbar-brand" href="#">
+    <img src="/assets/images/icon.png" width="30" height="30" alt="">
+  </a>
+  <a class="navbar-brand text-dark font-weight-bold" style="font-size: 30px;" routerLink="home">DEVICER</a>
+  <div class="input-group" style="width: 70%;">
+    <input type="text" class="form-control rounded-pill border border-primary shadow" placeholder="Search product">
+  </div>
+</nav>
+
+<div class="container">
+  <ul class="nav container">
+    <li class="nav-item">
+      <a class="nav-link text-dark font-weight-bold" routerLink="/home" routerLinkActive="nav-item active"
+        [routerLinkActiveOptions]="{exact:true}">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-dark font-weight-bold" routerLink="/products" routerLinkActive="nav-item active"
+        [routerLinkActiveOptions]="{exact:true}">Products</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-dark font-weight-bold" routerLink="/manage" routerLinkActive="nav-item active"
+        [routerLinkActiveOptions]="{exact:true}">Manage</a>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <a class="navbar-brand" href="#"><img src="http://fptshop.mauwebsitedep.com/wp-content/uploads/2018/08/logo.png" width="180px" height="50px"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+    arianavbar-brand-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav mr-auto">
+    </ul>
+    <form class="form-inline mt-2 mt-md-0">
+      <ul class="navbar-nav mr-auto">
+        <li routerLinkActive="nav-item active" [routerLinkActiveOptions]="{exact:true}">
+          <a class="nav-link" routerLink="/product">Trang chủ <span class="sr-only">(current)</span></a>
+        </li>
+        <li routerLinkActive="nav-item active" [routerLinkActiveOptions]="{exact:true}">
+          <a class="nav-link" routerLink="/about">Giới thiệu</a>
+        </li>
+        <li routerLinkActive="nav-item active" [routerLinkActiveOptions]="{exact:true}">
+          <a class="nav-link"  routerLink="/index">Dịch vụ</a>
+        </li>
+        <li routerLinkActive="nav-item active" [routerLinkActiveOptions]="{exact:true}">
+          <a class="nav-link"  routerLink="/contact">Liên hệ</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Quản trị</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Quản lý tài khoản</a>
+            <a class="dropdown-item" href="#">Quản lý sản phẩm</a>
+           
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Đăng xuất</a>
+          </div>
+        </li>
+      </ul>
+    </form>
+  </div>
+</nav>
+<br>
+<br>
+<br>
+<br>
+<app-nav></app-nav>

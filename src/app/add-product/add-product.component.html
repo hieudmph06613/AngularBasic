@@ -1,0 +1,71 @@
+<button type="text" class="btn btn-warning" data-toggle="modal" data-target="#myModal2">Thêm
+</button>
+
+<div class="modal" id="myModal2">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Thêm sản phẩm</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <!-- Modal body -->
+      <div class="modal-body">
+
+        <form #formAddProduct="ngForm" (submit)="onSubmit(formAddProduct)">
+
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Product Name" [(ngModel)]="product.name" required
+              minlength="3" #productName="ngModel" name="name">
+          </div>
+
+          <div class="alert alert-danger mt-3" *ngIf="productName.dirty && productName.errors?.required">
+           Tên sản phẩm đang trống. vui lòng nhập!!!
+          </div>
+          <div class="alert alert-danger mt-3" *ngIf="productName.dirty && productName.errors?.minlength">
+            Tên sản phẩm phải có ít nhất 3 kí tự!!!
+          </div>
+
+
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="priceSale" [(ngModel)]="product.priceSale"
+              #priceSale="ngModel" required
+              minlength="3" name="priceSale">
+          </div>
+          <div class="alert alert-danger mt-3" *ngIf="priceSale.dirty && priceSale.errors?.required">
+            Trường priceSale đang trống. vui lòng nhập!!!
+          </div>
+
+
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder=" priceRegular" [(ngModel)]="product.priceRegular" #priceRegular="ngModel" required name="priceRegular">
+          </div>
+          <div class="alert alert-danger mt-3" *ngIf="priceRegular.dirty && priceRegular.errors?.required">
+            Trường priceRegular đang trống. vui lòng nhập!!!
+          </div>
+
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="color" [(ngModel)]="product.color" #color="ngModel" required name="color">
+          </div>
+
+          <div class="alert alert-danger mt-3" *ngIf="color.dirty && color.errors?.required">
+            Trường color đang trống. vui lòng nhập!!!
+          </div>
+
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-warning" [disabled]="formAddProduct.invalid">Thêm</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Đóng</button>
+
+          </div>
+        </form>
+      </div>
+
+      <!-- Modal footer -->
+
+
+
+    </div>
+  </div>
+
+</div>

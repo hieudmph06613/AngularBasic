@@ -1,0 +1,11 @@
+.card-text{
+    text-decoration: line-through;
+}
+.card-text1{
+    color: red;
+}
+.modal-title{
+    margin-left: 285px;
+    font: bold;
+    color: orangered;
+}

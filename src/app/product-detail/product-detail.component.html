@@ -1,0 +1,48 @@
+<div class="container"><img src="{{product.imgLink}}" class="card-img-top"  height="300px" width="100%">
+
+    <div class="card-body">
+        <div class="title">
+            <h6>{{product.name}}</h6>
+
+        </div>
+        <p class="card-text1"> Giá mới: {{product.priceRegular}} $</p>
+        <p class="card-text">Giá cũ:{{product.priceSale}} $</p>
+        <p class="card-text3" [style.color]="product.color?'red':'black'">Màu sắc:
+            {{product.color?'Đỏ':'Đen'}} </p>
+        <small class="text-muted">Đánh giá : </small>
+        <i class='fas fa-star' style='font-size:18px;color:yellow'></i><i class='fas fa-star'
+            style='font-size:18px;color:yellow'></i><i class='fas fa-star' style='font-size:18px;color:yellow'></i><i
+            class="fa fa-star-half-full" style="font-size:20px;color: yellow"></i>
+
+    </div>
+    <div class="modal1-body">
+   
+        <form>
+
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="imgLink" [(ngModel)]="product.imgLink"
+              [ngModelOptions]="{standalone: true}">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Product Name" [(ngModel)]="product.name"
+              [ngModelOptions]="{standalone: true}">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="priceSale" [(ngModel)]="product.priceSale"
+              [ngModelOptions]="{standalone: true}">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder=" priceRegular" [(ngModel)]="product.priceRegular"
+              [ngModelOptions]="{standalone: true}">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="color" [(ngModel)]="product.color"
+              [ngModelOptions]="{standalone: true}">
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-warning" (click)=save()>Sửa</button>  
+          </div>
+        </form>
+      </div>
+</div>

@@ -1,0 +1,32 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light  fixed-top " style="height: 100px;" >
+    <div class="container">
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li routerLinkActive="nav-item active"  [routerLinkActiveOptions]={exact:true}>
+            <a class="nav-link" routerLink="/home">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li routerLinkActive="nav-item active"  [routerLinkActiveOptions]={exact:true}>
+            <a class="nav-link" routerLink="/product">Products</a>
+          </li>
+          <li routerLinkActive="nav-item active"  [routerLinkActiveOptions]={exact:true}>
+            <a class="nav-link" routerLink="/home">Contact Us</a>
+          </li>
+          <li routerLinkActive="nav-item active"  [routerLinkActiveOptions]={exact:true}>
+              <a class="nav-link" routerLink="/blog">Blog</a>
+            </li>
+        </ul>
+      </div>
+      <a class="navbar-brand" href="#">
+          <img src="https://www.hearth-bp.org/wp-content/uploads/2015/08/WineFoodLogo-300x225.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+          The Art Of Food
+        </a>
+    </div>
+    </nav>
+    
+  </header>
